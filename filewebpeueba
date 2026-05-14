@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Librerías de Onsen UI -->
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <title>App Onsen JS - entrecot09</title>
+</head>
+<body>
+
+    <!-- El Tabbar es el componente principal de navegación -->
+    <ons-tabbar swipeable position="bottom" id="myTabbar">
+        <ons-tab page="home.html" label="Inicio" icon="md-home" active></ons-tab>
+        <ons-tab page="catalog.html" label="Catálogo" icon="md-view-list"></ons-tab>
+        <ons-tab page="settings.html" label="Ajustes" icon="md-settings"></ons-tab>
+    </ons-tabbar>
+
+    <!-- Pantalla de Inicio -->
+    <template id="home.html">
+        <ons-page id="homePage">
+            <ons-toolbar>
+                <div class="center">Mi App</div>
+            </ons-toolbar>
+            <div style="text-align: center; margin-top: 50px;">
+                <h2>Bienvenido</h2>
+                <p>Esta es una app sencilla hecha con Onsen UI y JS puro.</p>
+                <ons-button id="btn-saludo">Saludar</ons-button>
+            </div>
+        </ons-page>
+    </template>
+
+    <!-- Pantalla de Catálogo -->
+    <template id="catalog.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Catálogo</div>
+            </ons-toolbar>
+            <ons-list>
+                <ons-list-header>Elementos disponibles</ons-list-header>
+                <ons-list-item modifier="chevron" tappable>Elemento A</ons-list-item>
+                <ons-list-item modifier="chevron" tappable>Elemento B</ons-list-item>
+            </ons-list>
+        </ons-page>
+    </template>
+
+    <!-- Pantalla de Ajustes -->
+    <template id="settings.html">
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Ajustes</div>
+            </ons-toolbar>
+            <div style="padding: 15px;">
+                <ons-list>
+                    <ons-list-item>
+                        Notificaciones
+                        <ons-switch modifier="right" checked></ons-switch>
+                    </ons-list-item>
+                </ons-list>
+            </div>
+        </ons-page>
+    </template>
+
+    <!-- Archivo de lógica JS -->
+    <script src="app.js"></script>
+</body>
+</html>
